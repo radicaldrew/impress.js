@@ -677,6 +677,12 @@
         // need to control the presentation that was just initialized.
         var api = event.detail.api;
         
+        // MOUSE SCROLL NAVIGATION HANDLER
+       document.addEventListener("scroll", function ( event ) {
+            event.preventDefault();
+            api.prev();
+        }, false);
+        
         // KEYBOARD NAVIGATION HANDLERS
         
         // Prevent default keydown action when one of supported key is pressed.
